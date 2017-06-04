@@ -11,3 +11,9 @@
 #scroll-to-top:hover{
     opacity:1;
 }
+
+#Information_3
+{
+	    position:fixed;
+		left: 5%;
+}
