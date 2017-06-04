@@ -1,9 +1,3 @@
- $(function(){
-    $("#scroll-to-top").click(function(e){
-       e.preventDefault();
-       $('html, body').animate({scrollTop:0}, 1500);
-    });
- });
  
  $(function(){
     var stt_is_shown = false;
