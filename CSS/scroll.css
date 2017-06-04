@@ -1,0 +1,13 @@
+.to-top{
+    text-align:center;
+}
+#scroll-to-top{
+    display:none;
+    position:fixed;
+    bottom:15px;
+    right:20px;
+    opacity:0.8;
+}
+#scroll-to-top:hover{
+    opacity:1;
+}

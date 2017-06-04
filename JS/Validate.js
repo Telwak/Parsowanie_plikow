@@ -63,7 +63,9 @@ function ValidationRegex()
 	if(xml_to_db.match(regex_XML_DB)||xml_parse.match(regex_xml) || csv_parse.match(regex_csv) || csv_DB.match(regex_csv) || xml_DB.match(regex_xml))
 	{
 
+
 		 $( "#Information_3" ).show( 400 );
+
 	}
 	else
 	{

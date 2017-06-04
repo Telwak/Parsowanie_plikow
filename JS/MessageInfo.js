@@ -1,4 +1,4 @@
-
+  
 var expressionDB = /FailedDB:/;
 var regexDB = new RegExp(expressionDB);
 var t = window.location.href ;

@@ -10,11 +10,16 @@
 <script src="STIMED-master\src\stimed.js"></script>
 <script src="STIMED-master\js.js"></script>
 <script src="JS\Validate.js"></script>
+<script src="JS\scroll_efect.js"></script>
 <script src="JS\MessageInfo.js"></script>
+    <LINK href="CSS/scroll.css" rel="stylesheet" type="text/css">
+
     <LINK href="CSS/style.css" rel="stylesheet" type="text/css">
+	
 </head>
      <body onload  = "Change_Color()">
 	 <?php
+ 
 	 if (!is_dir("Parsery/")) {
     mkdir("Parsery/");         
 }else if(!is_dir("Rezultat_parsowania/"))
@@ -24,9 +29,8 @@
 	 ?>
 </head>
 <body>
-<script>
+<a href="#" title="Do góry!" id="scroll-to-top"><img src="img/back-to-top-2.png" alt="strzałka do góry" /></a>
 
-  </script>
 <div style="display:none;" id="dialog" title="Uwaga!">
  <p>Nie można połączyć się z bazą danych! Sprawdz połączenie.</p>
 </div>
