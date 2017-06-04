@@ -78,14 +78,15 @@
 <form name = "XML_to_DB" action="src/XML_TO_DB.php" method="get">
 </br>
 <h4><span class="label label-default">XML_TO_DB:</span></h4></br>	</br>
-  Nazwa pliku: <input onkeyup = "ValidationRegex()" id = "XML_TO_DB" type="text" name="xml_to_db" required></br></br>
+  Nazwa pliku: <input onkeyup = "ValidationRegex()" id = "XML_TO_DB_NAME" type="text" name="xml_to_db" required></br></br>
   <input onclick="validateForm_XML__TO_DB()" type="submit" value="Generuj" class="btn btn-primary"><br><br>
   <div  id ="Information6" >
   <?php
-  echo(@$_GET["InformationXMLFile"]);
+  echo(@$_GET["InformationXML_DB_File"]);
   ?>
 </div>
 </form>
+</br></br>
 <div id="footer">
 Tomasz Telwak 2017r, Zadanie rekrutacyjne.
 </div>

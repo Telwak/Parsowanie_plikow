@@ -1,8 +1,7 @@
 <?php
-require 'Data/Conection_string.php';
-$QUERY = "Insert";
-$Parsery = "Parsery/";
-$Parsery_out = "Rezultat_parsowania/";
+
+$Parsery = "./Parsery/";
+$Parsery_out = "./Rezultat_parsowania/";
 $filexml = $Parsery.$_GET["patch"]. ".xml";
 $name_csv = $Parsery_out.$_GET["CSV_XML_NAME"].".csv";
 
@@ -23,24 +22,27 @@ header("Location: ../Index.php?InformationParseXML=Error: Nie znaleziono pliku".
 
     function createCsv($xml,$f)
     {
-
+require 'Data/Conection_string.php';
         foreach ($xml->children() as $item) 
         {
 
            $hasChild = (count($item->children()) > 0)?true:false;
 	
-   		 Add_To_Db($item);
+   		 	
+
         if( ! $hasChild)
         {
            $put_arr = array($item->getName(),$item); 
            fputcsv($f, $put_arr ,',','"');
+$query = "INSERT INTO `xml` (ID,TEXT) VALUES (null,'$item')";
+			  $result = $mysqli->query($query);
 
         }
         else
         {
          createCsv($item, $f);
-header("Location: ../Index.php?InformationParseXML=Plik " .$_GET["CSV_XML_NAME"]. ".csv został wygenerowany!");
         }
+header("Location: ../Index.php?InformationParseXML=Plik " .$_GET["CSV_XML_NAME"]. ".csv został wygenerowany!");
 	
      }
 

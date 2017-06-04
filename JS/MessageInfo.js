@@ -36,7 +36,7 @@ if (t.match(regex)) {
 	$('#Information1').addClass('AlertSuc');
 	$('#Information2').addClass('AlertSuc');
 	$('#Information4').addClass('AlertSuc');
-	$('#Information6').addClass('AlertErro');
+	$('#Information6').addClass('AlertSuc');
 	setTimeout(Delete_Message, 2000);
 	
 }	
