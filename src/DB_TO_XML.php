@@ -1,7 +1,7 @@
 <?php
 $QUERY = "Select";
 require 'Data/Conection_string.php';
-$xml_name = "./Rezultat_parsowania/".$_GET["name_db_xml"].".xml"; 
+$xml_name = "../Rezultat_parsowania/".$_GET["name_db_xml"].".xml"; 
 $xml = new DOMDocument();
 $xml->version  = "1.0";
 $xml->encoding = "UTF-8";

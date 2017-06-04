@@ -1,7 +1,7 @@
 <?php
 
-$Parsery = "./Parsery/";
-$Parsery_out = "./Rezultat_parsowania/";
+$Parsery = "../Parsery/";
+$Parsery_out = "../Rezultat_parsowania/";
 $filexml = $Parsery.$_GET["patch"]. ".xml";
 $name_csv = $Parsery_out.$_GET["CSV_XML_NAME"].".csv";
 
@@ -16,7 +16,7 @@ $name_csv = $Parsery_out.$_GET["CSV_XML_NAME"].".csv";
     }
 	
 		else{
-header("Location: ../Index.php?InformationParseXML=Error: Nie znaleziono pliku". $_GET["patch"] .".xml");
+header("Location: ../Index.php?InformationParseXML=Error: Nie znaleziono pliku ". $_GET["patch"] .".xml");
 
 }
 

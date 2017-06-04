@@ -32,7 +32,7 @@
 <a href="#" title="Do góry!" id="scroll-to-top"><img src="img/back-to-top-2.png" alt="strzałka do góry" /></a>
 
 <div style="display:none;" id="dialog" title="Uwaga!">
- <p>Nie można połączyć się z bazą danych! Sprawdz połączenie.</p>
+ <p>Nie można połączyć się z bazą danych! Sprawdż połączenie.</p>
 </div>
 	 <div style="display:none" id = "Information_3" class="alert alert-success" >
 	Uwaga: Nie musisz podawać rozszerzenia pliku
@@ -41,7 +41,7 @@
 </br></br>
 	<form name ="Parse_XML"  action="src/Parse_XML.php" method="get">	</br>
 	<h4><span class="label label-default">XML_TO_CSV:</span></h4></br></br>
-  Scieżka: <input onkeyup = "ValidationRegex()" id = "Patch_XML" type="text" name="patch" required><br>
+  Ścieżka: <input onkeyup = "ValidationRegex()" id = "Patch_XML" type="text" name="patch" required><br>
   Nazwa pliku wyjściowego: <input onkeyup = "ValidationRegex()" id ="Name_patch" type="text" name="CSV_XML_NAME" required ><br><br>
   <input onclick = "validateForm_Parse_XML()" type="submit" value="Generuj"  class="btn btn-primary"></br></br>
   <div id ="Information1" >

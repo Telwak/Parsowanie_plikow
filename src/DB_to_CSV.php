@@ -1,5 +1,5 @@
 <?php
-$Patch_file ="./Rezultat_parsowania/" .$_GET["name_csv"].".csv";
+$Patch_file ="../Rezultat_parsowania/" .$_GET["name_csv"].".csv";
 $QUERY = "Select";
 require 'Data/Conection_string.php';
 
