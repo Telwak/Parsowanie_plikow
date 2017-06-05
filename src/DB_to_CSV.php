@@ -1,8 +1,8 @@
 <?php
 //Form 2
 require 'Model/redirect.php';
-require 'Model/Patch_MODEL.php';
 require 'Data/Conection_string.php';
+require 'Model/Patch_MODEL.php';
 
 $File = new CSV($_GET["name_csv"]);
 $Patch_file = $File ->get_File_full_patch_csv();

@@ -1,17 +1,25 @@
 <?php
 //Form 1
 require 'Model/redirect.php';
-
+require 'Model/Patch_MODEL.php';
+/*
 $Parsery = "../Parsery/";
 $Parsery_out = "../Rezultat_parsowania/";
 $filexml = $Parsery.$_GET["patch"]. ".xml";
 $name_csv = $Parsery_out.$_GET["CSV_XML_NAME"].".csv";
+*/
 
+$File = new XML($_GET["patch"]);
+$filexml = $File ->get_File_full_patch_xml();
+
+$File1 = new CSV ($_GET["CSV_XML_NAME"]);
+$name_csv = $File1 ->get_File_full_patch_csv();
 
 
     if (file_exists($filexml)) 
            {
        $xml = simplexml_load_file($filexml);
+	
        $f = fopen($name_csv, 'w');
        createCsv($xml, $f);
        fclose($f);

@@ -25,7 +25,6 @@ private $_File_patch_xml_full = null;
 public function __construct($Patch_xml_full)
      {
         
-		
 		$this->_File_patch_xml_full = "../Parsery/".$Patch_xml_full.".xml";
     } 
  
