@@ -1,10 +1,12 @@
 <?php
+//Form 4
+require 'Model/redirect.php';
 require 'Data/Conection_string.php';
 $Patch_file ="../Parsery/".$_GET["xml_to_db"].".xml";
 if(!file_exists($Patch_file))
 {
-		header("Location: ../Index.php?InformationXML_DB_File=Error:Nie znaleziono pliku! ".$_GET["xml_to_db"]. ".xml");
-		return;
+Error_files_redirect_form4($_GET["xml_to_db"]);
+
 }
 
 $xmlDoc = new DOMDocument();
@@ -18,8 +20,6 @@ for ($i=0; $i < $itemCount; $i++){
   $result = $mysqli->query($query);
   
 }
-	
-	
-		header("Location: ../Index.php?InformationXML_DB_File=Parsowanie zakończone sukcesem! ".$_GET["xml_to_db"]. ".xml");
+Create_files_redirect_form4($_GET["xml_to_db"]);
 	
 ?>

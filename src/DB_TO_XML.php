@@ -1,4 +1,6 @@
 <?php
+//Form 3
+require 'Model/redirect.php';
 $QUERY = "Select";
 require 'Data/Conection_string.php';
 $xml_name = "../Rezultat_parsowania/".$_GET["name_db_xml"].".xml"; 
@@ -11,5 +13,7 @@ $xml->appendChild( $xml->createElement("ID", $row['ID']) );
 $xml->appendChild( $xml->createElement("TEXT", $row['TEXT']) );
 }
 $xml->save($xml_name);
-	header("Location: ../Index.php?InformationXMLFile=Wygenerowano plik! ".$_GET["name_db_xml"]. ".xml");
+
+Create_files_redirect_form3($_GET["name_db_xml"])
+
 ?>

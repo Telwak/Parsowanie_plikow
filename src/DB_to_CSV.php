@@ -1,7 +1,11 @@
 <?php
-$Patch_file ="../Rezultat_parsowania/" .$_GET["name_csv"].".csv";
-$QUERY = "Select";
+//Form 2
+require 'Model/redirect.php';
+require 'Model/Patch_MODEL.php';
 require 'Data/Conection_string.php';
+
+$Patch_file = new CSV($_GET["name_csv"]);
+$Patch_file ->get_File_full_patch_csv();
 
 $query = "SELECT * FROM xml ORDER by ID desc";
 $result = $mysqli->query($query);
@@ -16,8 +20,8 @@ fclose($file);
 
 $result = $mysqli->query($query);
 mysql_close($result);
-
-    header("Location: ../Index.php?InformationDBFile=Wygenerowano plik! ".$_GET["name_csv"].".csv" );
+Create_files_redirect_form2($_GET["name_csv"]);
+    
 
 
 ?>

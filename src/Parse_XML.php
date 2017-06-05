@@ -1,4 +1,6 @@
 <?php
+//Form 1
+require 'Model/redirect.php';
 
 $Parsery = "../Parsery/";
 $Parsery_out = "../Rezultat_parsowania/";
@@ -16,8 +18,7 @@ $name_csv = $Parsery_out.$_GET["CSV_XML_NAME"].".csv";
     }
 	
 		else{
-header("Location: ../Index.php?InformationParseXML=Error: Nie znaleziono pliku ". $_GET["patch"] .".xml");
-
+Error_files_redirect_form1($_GET["patch"]);
 }
 
     function createCsv($xml,$f)
@@ -42,7 +43,7 @@ $query = "INSERT INTO `xml` (ID,TEXT) VALUES (null,'$item')";
         {
          createCsv($item, $f);
         }
-header("Location: ../Index.php?InformationParseXML=Plik " .$_GET["CSV_XML_NAME"]. ".csv został wygenerowany!");
+Create_files_redirect_form1($_GET["patch"]);
 	
      }
 
