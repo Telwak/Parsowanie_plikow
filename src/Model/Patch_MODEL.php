@@ -28,7 +28,7 @@ private $_File_patch_xml_full = null;
 public function __construct($Patch_xml,$Patch_xml_full)
      {
         
-		$this->_File_patch_xml = $_File_patch_xml;
+		
 		$this->_File_patch_xml_full = "../Parsery/".$_Patch_xml_full.".xml";
     } 
  
@@ -48,24 +48,18 @@ public function __construct($Patch_xml,$Patch_xml_full)
 	
 	class CSV
 {
-private $_File_patch_csv = null;
-private $_File_patch_csv_full = null;
-public function __construct($Patch_csv,$Patch_csv_full)
+
+private $Patch_csv_full = null;
+public function __construct($Patch_csv_full)
      {
         
-		$this->_File_patch_csv = $_File_patch_csv;
-		$this->_File_patch_csv_full = "../Parsery/".$_Patch_csv_full.".csv";
+	
+		$this->_Patch_csv_full = "../Rezultat_parsowania/".$Patch_csv_full.".csv";
     } 
  
-
-
-	public function get_File_patch_csv()
-    {
-       return $this->_File_patch_csv;            
-    } 
 		public function get_File_full_patch_csv()
     {
-       return $this->_File_patch_csv;            
+       return $this->_Patch_csv_full;            
     } 
 	}
 ?>
