@@ -2,7 +2,7 @@
 function Create_files_redirect_form1($Name_files)
 {
 	header("Location: ../Index.php?InformationParseXML=Plik " .$Name_files. ".csv został wygenerowany!");
-	return;
+	exit();
 }
 function Error_files_redirect_form1($Name_files)
 {
