@@ -16,7 +16,7 @@ $xml->encoding = "UTF-8";
  //  $query = "SELECT * FROM XML ORDER BY ID DESC";
 			  //$result = $mysqli->query($query);
 			  
- $query = new Select('*');
+ $query = new Select('*',false);
 $query1 = $query ->Send_Select_query();
 $result = $query ->Get_Select_query();
 

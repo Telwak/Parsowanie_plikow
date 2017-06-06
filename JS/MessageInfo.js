@@ -12,7 +12,7 @@ if (t.match(regexDB))
 
    of: window});
   } );
-
+  
 }
 
 function Change_Color() {

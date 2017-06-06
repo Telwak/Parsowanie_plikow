@@ -15,9 +15,21 @@
     <LINK href="CSS/scroll.css" rel="stylesheet" type="text/css">
 
     <LINK href="CSS/style.css" rel="stylesheet" type="text/css">
-	
+	<script>
+	function reply_click(){
+  $( function() {
+    $( "#Grid" ).dialog({
+	my: "center",
+    at: "center",
+    modal: true,
+
+   of: window});
+  } );
+}
+	</script>
 </head>
      <body onload  = "Change_Color()">
+	 <button type="button"  onClick="reply_click()">Click Me!</button>
 	 <?php
  
 	 if (!is_dir("Parsery/")) {
@@ -94,5 +106,13 @@
 <div id="footer">
 Tomasz Telwak 2017r, Zadanie rekrutacyjne.
 </div>
+<div style="display:none;" id="Grid" title="Lista danych!">
+<?php
+require 'src/Grid.php';
+?>
+</div>
+
+
+
  </body>
 </html>

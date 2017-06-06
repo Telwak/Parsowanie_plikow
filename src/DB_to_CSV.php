@@ -11,7 +11,7 @@ $Patch_file = $File ->get_File_full_patch_csv();
 //$query = "SELECT * FROM xml ORDER by ID desc";
 //$result = $mysqli->query($query);
 
-$query = new Select('*');
+$query = new Select('*',false);
 $query1 = $query ->Send_Select_query();
 $result = $query ->Get_Select_query();
 

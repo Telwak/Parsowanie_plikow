@@ -24,7 +24,7 @@ for ($i=0; $i < $itemCount; $i++){
   $title = $xmlObject->item($i)->getElementsByTagName('TEXT')->item(0)->childNodes->item(0)->nodeValue;
 	//$query = "INSERT INTO `xml` (ID,TEXT) VALUES (null,'$title')";
   //$result = $mysqli->query($query);
-  $query = new ADD($title);
+  $query = new ADD($title,false);
 $result = $query ->Send_Add_query();
 }
 Create_files_redirect_form4($_GET["xml_to_db"]);

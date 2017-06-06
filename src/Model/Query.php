@@ -11,7 +11,7 @@ Class ADD
     } 
 	public function Send_Add_query()
 	{
-		require 'Data/Conection_string.php';
+		require'Data/Conection_string.php';
 		$query = "INSERT INTO `xml` (ID,TEXT) VALUES (null,'$this->_Add_query')";
 		$mysqli->query($query);
 	}
@@ -21,14 +21,25 @@ Class Select
 {
 	private $_Select_query = null;
 	private $_Select_query_fetch = null;
+	private $_Localization = null;
 	
-	public function __construct($Query)
+	
+	public function __construct($Query,$Localization)
      {
 		$this->_Select_query = $Query;
+		$this->_Localization = $Localization;
     } 
 	public function Send_Select_query()
 	{
-		require 'Data/Conection_string.php';
+		if($this->_Localization == false)
+		{
+			require 'Data/Conection_string.php';
+			
+		}else if ($this->_Localization == true)
+		{
+			require 'src/Data/Conection_string.php';
+		}
+		
 		$query = "SELECT $this->_Select_query FROM xml ORDER BY ID DESC";
 		//$mysqli->query($query);
 		$this->_Select_query_fetch = $mysqli->query($query);
