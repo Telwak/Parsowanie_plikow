@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
      <head>
-	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -12,21 +12,11 @@
 <script src="JS\Validate.js"></script>
 <script src="JS\scroll_efect.js"></script>
 <script src="JS\MessageInfo.js"></script>
+<script src="JS\Grid.js"></script>
     <LINK href="CSS/scroll.css" rel="stylesheet" type="text/css">
-
+	  <LINK href="CSS/Grid.css" rel="stylesheet" type="text/css">
     <LINK href="CSS/style.css" rel="stylesheet" type="text/css">
-	<script>
-	function reply_click(){
-  $( function() {
-    $( "#Grid" ).dialog({
-	my: "center",
-    at: "center",
-    modal: true,
-
-   of: window});
-  } );
-}
-	</script>
+	
 </head>
      <body onload  = "Change_Color()">
 	 <button type="button"  onClick="reply_click()">Click Me!</button>
