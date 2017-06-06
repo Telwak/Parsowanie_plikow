@@ -1,6 +1,7 @@
 <?php
 require_once 'Model\redirect.php';
 
+
 $mysqli = new mysqli("localhost", "root", "", "xml");		
 		$mysqli->set_charset("utf8");
 

@@ -2,7 +2,9 @@
 //Form 4
 require 'Model/Patch_MODEL.php';
 require 'Model/redirect.php';
-require 'Data/Conection_string.php';
+require 'Model/Query.php';
+
+//require 'Data/Conection_string.php';
 //$Patch_file ="../Parsery/".$_GET["xml_to_db"].".xml";
 $File = new XML($_GET["xml_to_db"]);
 $Patch_file = $File ->get_File_full_patch_xml();
@@ -20,9 +22,10 @@ $itemCount = $xmlObject->length;
 
 for ($i=0; $i < $itemCount; $i++){
   $title = $xmlObject->item($i)->getElementsByTagName('TEXT')->item(0)->childNodes->item(0)->nodeValue;
-	$query = "INSERT INTO `xml` (ID,TEXT) VALUES (null,'$title')";
-  $result = $mysqli->query($query);
-  
+	//$query = "INSERT INTO `xml` (ID,TEXT) VALUES (null,'$title')";
+  //$result = $mysqli->query($query);
+  $query = new ADD($title);
+$result = $query ->Send_Add_query();
 }
 Create_files_redirect_form4($_GET["xml_to_db"]);
 	

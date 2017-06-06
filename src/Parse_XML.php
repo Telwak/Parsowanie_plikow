@@ -1,5 +1,6 @@
 <?php
 //Form 1
+require 'Model/Query.php';
 require 'Model/redirect.php';
 require 'Model/Patch_MODEL.php';
 /*
@@ -37,7 +38,7 @@ Error_files_redirect_form1($_GET["patch"]);
 
     function createCsv($xml,$f)
     {
-require 'Data/Conection_string.php';
+//require 'Data/Conection_string.php';
         foreach ($xml->children() as $item) 
         {
 
@@ -49,8 +50,10 @@ require 'Data/Conection_string.php';
         {
            $put_arr = array($item->getName(),$item); 
            fputcsv($f, $put_arr ,',','"');
-			$query = "INSERT INTO `xml` (ID,TEXT) VALUES (null,'$item')";
-			  $result = $mysqli->query($query);
+			//$query = "INSERT INTO `xml` (ID,TEXT) VALUES (null,'$item')";
+			//  $result = $mysqli->query($query);
+			$query = new ADD($item);
+				$result = $query ->Send_Add_query();
 
         }
         else
