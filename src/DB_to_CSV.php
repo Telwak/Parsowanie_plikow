@@ -23,8 +23,8 @@ while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 
 fclose($file);
 
-$result = $mysqli->query($query);
-mysqli_close($result);
+//$result = $mysqli->query($query);
+//mysqli_close($result);
 Create_files_redirect_form2($_GET["name_csv"]);
     
 
