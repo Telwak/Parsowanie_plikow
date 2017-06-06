@@ -27,8 +27,8 @@
     mkdir("Rezultat_parsowania/");         
 }
 	 ?>
-</head>
-<body>
+
+
 <a href="#" title="Do góry!" id="scroll-to-top"><img src="img/back-to-top-2.png" alt="strzałka do góry" /></a>
 
 <div style="display:none;" id="dialog" title="Uwaga!">
