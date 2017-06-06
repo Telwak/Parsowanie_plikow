@@ -13,7 +13,7 @@ public function __construct($Full_Patch_XML)
 	
 	public function get_File_full_patch_xml_out()
 	{
-		return $this->_File_patch_xml_out;  
+		return $this->_File_patch_xml_out_full;  
 	}
 	
 }

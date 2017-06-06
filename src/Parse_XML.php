@@ -16,13 +16,19 @@ $File1 = new CSV ($_GET["CSV_XML_NAME"]);
 $name_csv = $File1 ->get_File_full_patch_csv();
 
 
-    if (file_exists($filexml)) 
+     if (file_exists($filexml)) 
            {
        $xml = simplexml_load_file($filexml);
-	
+	if($xml == false)
+	{
+		Error_files_redirect($_GET["patch"]);
+	}else if ($xml == true)
+	{
+		
        $f = fopen($name_csv, 'w');
        createCsv($xml, $f);
        fclose($f);
+	}
     }
 	
 		else{
@@ -43,19 +49,20 @@ require 'Data/Conection_string.php';
         {
            $put_arr = array($item->getName(),$item); 
            fputcsv($f, $put_arr ,',','"');
-$query = "INSERT INTO `xml` (ID,TEXT) VALUES (null,'$item')";
+			$query = "INSERT INTO `xml` (ID,TEXT) VALUES (null,'$item')";
 			  $result = $mysqli->query($query);
 
         }
         else
         {
          createCsv($item, $f);
+		
         }
-Create_files_redirect_form1($_GET["patch"]);
+
 	
      }
 
     }
-
+ Create_files_redirect_form1($_GET["CSV_XML_NAME"]);
 			
 ?>

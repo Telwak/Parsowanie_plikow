@@ -35,5 +35,10 @@ function Error_DB()
 		 header("Location: ../Index.php?FailedDB: Nie można się połączyć z bazą danych!");
 		 exit();
 }
+function Error_files_redirect($Name_files)
+{
+header("Location: ../Index.php?InformationParseXML=Error: Błąd podczas parsowania ". $Name_files .".xml");
+ exit();
+}
 
 ?>
