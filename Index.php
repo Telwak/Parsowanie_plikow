@@ -54,13 +54,19 @@
 <hr>
 <li onclick="reply_click()">Wszystkie rekordy</li>
 <hr>
+<li>CV</li>
+<hr>
 </ul>
 </div>
+
+
 	<form name ="Parse_XML"  action="src/Parse_XML.php" method="get">	</br>
 	<h4><span class="label label-default">XML_TO_CSV:</span></h4></br></br>
   Ścieżka: <input onkeyup = "ValidationRegex()" id = "Patch_XML" type="text" name="patch" required><br>
   Nazwa pliku wyjściowego: <input onkeyup = "ValidationRegex()" id ="Name_patch" type="text" name="CSV_XML_NAME" required ><br><br>
-  <input onclick = "validateForm_Parse_XML()" type="submit" value="Generuj"  class="btn btn-primary"></br></br>
+  <input onclick = "validateForm_Parse_XML()" type="submit" value="Generuj"  class="btn btn-primary">
+  <input  type="reset" value="Wyczyść"  class="btn btn-danger">
+  </br></br>
   <div id ="Information1" >
     <?php
   echo(@$_GET["InformationParseXML"]);
@@ -73,7 +79,9 @@
 </br>
 <h4><span class="label label-default">DB_TO_CSV:</span></h4></br>	</br>
   Nazwa pliku: <input onkeyup = "ValidationRegex()" id = "Name" type="text" name="name_csv" required></br></br>
-  <input onclick="validateForm_DV_CSV()" type="submit" value="Generuj" class="btn btn-primary"><br><br>
+  <input onclick="validateForm_DV_CSV()" type="submit" value="Generuj" class="btn btn-primary">
+  <input  type="reset" value="Wyczyść"  class="btn btn-danger">
+  <br><br>
   <div  id ="Information2" >
   <?php
   echo(@$_GET["InformationDBFile"]);
@@ -88,7 +96,9 @@
 </br>
 <h4><span class="label label-default">DB_TO_XML:</span></h4></br>	</br>
   Nazwa pliku: <input onkeyup = "ValidationRegex()" id = "Name_XML_DB" type="text" name="name_db_xml" required></br></br>
-  <input onclick="validateForm_Parse_XML1()" type="submit" value="Generuj" class="btn btn-primary"><br><br>
+  <input onclick="validateForm_Parse_XML1()" type="submit" value="Generuj" class="btn btn-primary">
+  <input  type="reset" value="Wyczyść"  class="btn btn-danger">
+  <br><br>
   <div  id ="Information4" >
   <?php
   echo(@$_GET["InformationXMLFile"]);
@@ -100,7 +110,9 @@
 </br>
 <h4><span class="label label-default">XML_TO_DB:</span></h4></br>	</br>
   Nazwa pliku: <input onkeyup = "ValidationRegex()" id = "XML_TO_DB_NAME" type="text" name="xml_to_db" required></br></br>
-  <input onclick="validateForm_XML__TO_DB()" type="submit" value="Generuj" class="btn btn-primary"><br><br>
+  <input onclick="validateForm_XML__TO_DB()" type="submit" value="Generuj" class="btn btn-primary">
+  <input  type="reset" value="Wyczyść"  class="btn btn-danger">	
+  <br><br>
   <div  id ="Information6" >
   <?php
   echo(@$_GET["InformationXML_DB_File"]);
