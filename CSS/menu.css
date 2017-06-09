@@ -1,0 +1,54 @@
+#Menu 
+{
+margin:1.5%;
+position:fixed;
+
+}
+#OpenMenu
+{
+	position: absolute;
+	background-color:rgba(255,153,0,0.7);
+	width:300px;
+	height:300px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+	border: 8px solid;
+    border-radius: 25px;
+    z-index: 1;
+}
+#Cross_menu
+{
+margin-left:80%;
+ overflow: hidden;
+ transition-duration: 0.8s;
+ transition-property: transform;
+}
+#Cross_menu:hover
+{
+ transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
+#OpenMenu h4
+{
+	color:black;
+	text-align:center;
+	font-style:italic;
+}
+#OpenMenu li
+{
+	list-style-type: none;
+	text-align:left;
+	font-style:normal;
+	column-rule-color: red;
+}
+#OpenMenu hr
+{
+border: 0px; 
+background: red; 
+height: 5px;
+margin-right:30%;
+}
+#OpenMenu li:hover 
+{
+	font-style:italic;
+	color: white;
+}

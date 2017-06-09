@@ -13,13 +13,15 @@
 <script src="JS\scroll_efect.js"></script>
 <script src="JS\MessageInfo.js"></script>
 <script src="JS\Grid.js"></script>
+<script src="JS\Menu.js"></script>
     <LINK href="CSS/scroll.css" rel="stylesheet" type="text/css">
 	  <LINK href="CSS/Grid.css" rel="stylesheet" type="text/css">
     <LINK href="CSS/style.css" rel="stylesheet" type="text/css">
-	
+<LINK href="CSS/menu.css" rel="stylesheet" type="text/css">
 </head>
+
      <body onload  = "Change_Color()">
-	 <button type="button"  onClick="reply_click()">Click Me!</button>
+	 <!-- <button type="button"  onClick="reply_click()">Click Me!</button> -->
 	 <?php
  
 	 if (!is_dir("Parsery/")) {
@@ -32,7 +34,7 @@
 
 
 <a href="#" title="Do góry!" id="scroll-to-top"><img src="img/back-to-top-2.png" alt="strzałka do góry" /></a>
-
+<a onclick ="OpenMenu()" href="#" title="Menu!" id="Menu"><img src="img/list-512.bmp" alt="Menu" /></a>
 <div style="display:none;" id="dialog" title="Uwaga!">
  <p>Nie można połączyć się z bazą danych! Sprawdż połączenie.</p>
 </div>
@@ -41,6 +43,19 @@
 	 </div>
 	
 </br></br>
+<div style="display:none" id = "OpenMenu" class="navigation-div">
+<div id ="Cross_menu">
+<a onclick ="CloseMenu()"  title="CloseMenu" id="CloseMenu"><img src="img/close_button_1-512.bmp" alt="CloseMenu" /></a>
+</div>
+<h4>MENU:<h4>
+</br>
+<ul>
+<li onclick="javascript:location.href='instrukcja.pdf'">Instrukcja</li>
+<hr>
+<li onclick="reply_click()">Wszystkie rekordy</li>
+<hr>
+</ul>
+</div>
 	<form name ="Parse_XML"  action="src/Parse_XML.php" method="get">	</br>
 	<h4><span class="label label-default">XML_TO_CSV:</span></h4></br></br>
   Ścieżka: <input onkeyup = "ValidationRegex()" id = "Patch_XML" type="text" name="patch" required><br>
